@@ -40,4 +40,4 @@
       dir: vars/
 
   - debug:
-    msg: "{{ ec2_id }}"
+    msg: "Instance ID: {{ ec2_id }}"
