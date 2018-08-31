@@ -34,11 +34,11 @@
   gather_facts: False
 
   tasks:
+  - name: Assign Elastic IP
+    ec2_eip:
+      device_id: {{ ec2_id }}
+      ip: 18.185.233.18
 
-  - name: Get the variables
-    include_vars:
-      dir: vars/
-
-  - name: Get Instance ID
-    debug:
-      msg: "Instance ID: {{ ec2_id }}"
+  #- name: Get Instance ID
+  #  debug:
+  #    msg: "Instance ID: {{ ec2_id }}"
