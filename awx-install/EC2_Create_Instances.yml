@@ -31,7 +31,7 @@
 
 - name: Assign Elastic IP
   hosts: tag_Role_AWX_Server
-  gather_facts: False
+  gather_facts: True
 
   tasks:
 
