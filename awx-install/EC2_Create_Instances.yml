@@ -18,16 +18,21 @@
                  echo "{{ ansible_ssh_pub }}" > /root/.ssh/authorized_keys
                  apt install -y python python-simplejson
       image: "{{ aws_instance_ami }}"
-      wait: true
+      wait: false
       count: "{{ item.count }}"
       group_id: "{{ aws_security_groups }}"
       vpc_subnet_id: "{{ aws_vpc_subnet_id }}"
       instance_tags: '{"Name":"{{ item.role }}","Role":"{{ item.role }}"}'
     loop:
       - { role: 'AWX Server', count: 1 }
-      #- { role: 'Webserver', count: 2 }
+      #- { role: w'Webserver', count: 2 }
       #- { role: 'Reverse Proxy', count: 2 }
 
+ - name: Wait for SSH to come up
+  wait_for_connection:
+    delay: 10
+    timeout: 10
+  with_items: "{{ ec2.instances }}"
 
 - name: Assign Elastic IP
   hosts: tag_Role_AWX_Server
