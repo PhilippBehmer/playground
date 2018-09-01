@@ -36,7 +36,7 @@
   tasks:
   - name: Assign Elastic IP
     ec2_eip:
-      device_id: {{ ec2_id }}
+      device_id: "{{ ec2_id }}"
       ip: 3.120.1.51
       #ip: 18.185.233.18
 
