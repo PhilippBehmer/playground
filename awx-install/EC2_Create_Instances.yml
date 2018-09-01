@@ -22,7 +22,7 @@
       #count: "{{ item.count }}"
       group_id: "{{ aws_security_groups }}"
       vpc_subnet_id: "{{ aws_vpc_subnet_id }}"
-      instance_tags: '{"Name":"{{ item.role }}","Role":"{{ item.role }}"}'
+      #instance_tags: '{"Name":"{{ item.role }}","Role":"{{ item.role }}"}'
       instance_tags: '{"Name":"AWX Server","Role":"AWX Server"}'
     register: ec2
     #loop:
@@ -31,6 +31,7 @@
       #- { role: 'Reverse Proxy', count: 2 }
 
   - name: Wait for SSH to come up
+    delegate_to: "{{ item.public_dns_name }}"
     wait_for_connection:
       delay: 10
       timeout: 10
