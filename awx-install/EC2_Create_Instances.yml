@@ -23,6 +23,7 @@
       group_id: "{{ aws_security_groups }}"
       vpc_subnet_id: "{{ aws_vpc_subnet_id }}"
       instance_tags: '{"Name":"{{ item.role }}","Role":"{{ item.role }}"}'
+    register: ec2  
     loop:
       - { role: 'AWX Server', count: 1 }
       #- { role: w'Webserver', count: 2 }
