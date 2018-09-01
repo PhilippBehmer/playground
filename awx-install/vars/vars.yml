@@ -9,7 +9,8 @@ ansible_ssh_pub: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC3tU8XpEuQ+SX5DjdXizRColE
 # AWS vars
 
 aws_instance_ami: ami-027583e616ca104df             # Ubuntu Xenial 20180814
-aws_vpc_subnet_id: subnet-82bc9be9                  # DevOpsPlayground VPC
+#aws_vpc_subnet_id: subnet-82bc9be9                  # DevOpsPlayground VPC
+aws_vpc_subnet_id: subnet-031c986b                  # philipp-vpc-01
 aws_region: eu-central-1                            # Frankfurt
 aws_instance_type: t2.micro
 aws_security_groups: ['sg-9d9ac7f0', 'sg-73663b1e', 'sg-1165387c'] # AllFromMyIP, Default
