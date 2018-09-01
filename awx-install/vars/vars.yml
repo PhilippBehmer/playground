@@ -13,5 +13,6 @@ aws_instance_ami: ami-027583e616ca104df             # Ubuntu Xenial 20180814
 aws_vpc_subnet_id: subnet-031c986b                  # philipp-vpc-01
 aws_region: eu-central-1                            # Frankfurt
 aws_instance_type: t2.micro
-aws_security_groups: ['sg-9d9ac7f0', 'sg-73663b1e', 'sg-1165387c'] # AllFromMyIP, Default
+#aws_security_groups: ['sg-9d9ac7f0', 'sg-73663b1e', 'sg-1165387c'] # AllFromMyIP, Default
+aws_security_groups: ['sg-c0d6f4a8', 'sg-fb437093', 'sg-1ddaf875']
 aws_ssh_key: TM-AWS-AccessKey
