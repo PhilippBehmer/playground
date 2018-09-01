@@ -37,7 +37,8 @@
   - name: Assign Elastic IP
     ec2_eip:
       device_id: {{ ec2_id }}
-      ip: 18.185.233.18
+      #ip: 18.185.233.18
+      ip: 3.120.1.51
 
   #- name: Get Instance ID
   #  debug:
