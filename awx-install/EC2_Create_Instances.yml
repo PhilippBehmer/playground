@@ -31,7 +31,7 @@
       #- { role: 'Reverse Proxy', count: 2 }
 
   - name: Wait for SSH to come up
-    delegate_to: "{{ item.public_dns_name }}"
+    delegate_to: "{{ item.private_ip }}"
     wait_for_connection:
       delay: 10
       timeout: 120
