@@ -35,9 +35,9 @@
       timeout: 120
     with_items: "{{ ec2.instances }}"
 
-- name: Assign Elastic IP
-  hosts: tag_Role_AWX_Server
-  gather_facts: False
+  - name: Assign Elastic IP
+    hosts: tag_Role_AWX_Server
+    gather_facts: False
 
   tasks:
   - name: Assign Elastic IP
