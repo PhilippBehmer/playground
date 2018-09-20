@@ -16,3 +16,7 @@ aws_instance_type: t2.micro
 #aws_security_groups: ['sg-9d9ac7f0', 'sg-73663b1e', 'sg-1165387c'] # AllFromMyIP, Default
 aws_security_groups: ['sg-c0d6f4a8', 'sg-fb437093', 'sg-1ddaf875']
 aws_ssh_key: TM-AWS-AccessKey
+
+
+
+awx_elastic_ip: 18.185.233.18
